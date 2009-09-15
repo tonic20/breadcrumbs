@@ -8,7 +8,7 @@ created the plugin.
 
 == Changes
 
-Changed breadcrumb method to accept 4 options: <tt>:wrap_with_tag</tt>, 
+Changed breadcrumb method to accept 4 options: <tt>:tag</tt>, 
 <tt>:class</tt>, <tt>:separator</tt> and <tt>:show_current_link</tt>.
 
 * <tt>:tag</tt> - An HTML tag to wrap each breadcrumb entry with (ie. li, p, etc.). Default value "li".
