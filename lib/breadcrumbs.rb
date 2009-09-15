@@ -30,10 +30,10 @@ module Breadcrumbs
 
     # Returns HTML markup for the breadcrumbs
     def breadcrumbs(*args)
-      default_options = {:separator => "&nbsp;&raquo;&nbsp;", :tag => :li}
+      default_options = {:separator => "&nbsp;&raquo;&nbsp;", :tag => :li, :show_current_link => true }
       options = default_options.merge(args.extract_options!)
       @breadcrumbs.map do |name, url|
-        crumb = link_to_unless_current(name, url)
+        crumb = options[:show_current_link] ? link_to(name, url) : link_to_unless_current(name, url)
         options[:tag] && content_tag(options[:tag], crumb) || crumb
       end.join("#{options[:separator]}")
     end

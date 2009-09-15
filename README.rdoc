@@ -8,12 +8,13 @@ created the plugin.
 
 == Changes
 
-Changed breadcrumb method to accept 3 options: <tt>:wrap_with_tag</tt>, 
-<tt>:class</tt> and <tt>:separator</tt>.
+Changed breadcrumb method to accept 4 options: <tt>:wrap_with_tag</tt>, 
+<tt>:class</tt>, <tt>:separator</tt> and <tt>:show_current_link</tt>.
 
-* <tt>:wrap_with_tag</tt> - An HTML tag to wrap each breadcrumb entry with (ie. li, p, etc.).
+* <tt>:tag</tt> - An HTML tag to wrap each breadcrumb entry with (ie. li, p, etc.). Default value "li".
 * <tt>:class</tt> - An HTML class to give to the tag specified in the +:wrap_with_tag+ option.
-* <tt>:separator</tt> - Acts the same as the old breadcrumb method worked.
+* <tt>:separator</tt> - Acts the same as the old breadcrumb method worked. Default value "&nbsp;&raquo;&nbsp;".
+* <tt>:show_current_link</tt> - Option to show current link or not. Default value "true".
 
 == Example
 
@@ -47,7 +48,7 @@ Changed breadcrumb method to accept 3 options: <tt>:wrap_with_tag</tt>,
   #
   <%= breadcrumbs %>
   <%= breadcrumbs(:separator => '=>') %>
-  <%= breadcrumbs(:wrap_with_tag => 'li') %>
+  <%= breadcrumbs(:tag => 'li') %>
 
 == Acknowledgments
 
