@@ -45,9 +45,9 @@ Changed breadcrumb method to accept 3 options: <tt>:wrap_with_tag</tt>,
   ##
   # app/views/layouts/application.html.erb
   #
-  <%= breadcrumb %>
-  <%= breadcrumb(:separator => '=>') %>
-  <%= breadcrumb(:wrap_with_tag => 'li') %>
+  <%= breadcrumbs %>
+  <%= breadcrumbs(:separator => '=>') %>
+  <%= breadcrumbs(:wrap_with_tag => 'li') %>
 
 == Acknowledgments
 
